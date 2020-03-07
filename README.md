@@ -19,3 +19,9 @@ docker run -d -p 8888:80   --name=front sentiment-analysis-frontend
 docker run -d -p 8080:8080 --name=web   sentiment-analysis-web-app
 docker run -d -p 5000:5000 --name=logic sentiment-analysis-logic
 
+
+installing cubectl:
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+kubectl version --client
