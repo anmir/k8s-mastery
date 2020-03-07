@@ -8,3 +8,10 @@ To learn more about Kubernetes and other related topics check the following exam
 * [Istio around everything else series](https://rinormaloku.com/series/istio-around-everything-else/)
 * [Simple CI/CD for Kubernetes with Azure DevOps](https://www.orange-networks.com/blogs/224-azure-devops-ci-cd-pipeline-to-deploy-to-kubernetes)
 * Envoy series - to be added!
+
+
+Usage:
+docker run -d -p 5000:5000 --name=logic sentiment-analysis-logic
+docker run -d -p 8080:8080 --name=web   sentiment-analysis-web-app
+docker run -d -p 8888:80   --name=front sentiment-analysis-frontend
+
