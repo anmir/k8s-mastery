@@ -11,7 +11,11 @@ To learn more about Kubernetes and other related topics check the following exam
 
 
 Usage:
-docker run -d -p 5000:5000 --name=logic sentiment-analysis-logic
-docker run -d -p 8080:8080 --name=web   sentiment-analysis-web-app
+docker build -f Dockerfile -t sentiment-analysis-frontend .
+docker build -f Dockerfile -t sentiment-analysis-web-app .
+docker build -f Dockerfile -t sentiment-analysis-logic .
+
 docker run -d -p 8888:80   --name=front sentiment-analysis-frontend
+docker run -d -p 8080:8080 --name=web   sentiment-analysis-web-app
+docker run -d -p 5000:5000 --name=logic sentiment-analysis-logic
 
