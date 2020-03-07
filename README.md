@@ -33,6 +33,12 @@ wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key a
 sudo add-apt-repository "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
 sudo apt-get update
 sudo apt-get install virtualbox-6.0 -y
+sudo docker-machine create --driver virtualbox default
+minikube start --vm-driver=virtualbox
+
+AND NOTHING....
+SHOULD START AGAIN :(
+все сырое
 
 
 3) native package management (not recommended):
